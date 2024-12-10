@@ -69,8 +69,8 @@ function parseFile() {
 function insertText(inputContent, type) {
   DOMSelect.results.insertAdjacentHTML("beforeend", `<br></br>`);
   const content = inputContent;
-  if (type === "file") {
-    content.forEach(function (item) {
+  if (type === "file") { //selection
+    content.forEach(function (item) { //forEach iteration
       DOMSelect.results.insertAdjacentHTML(
         "beforeend",
         `<p class="text">${item}</p>`
@@ -85,6 +85,10 @@ function insertText(inputContent, type) {
     });
     DOMSelect.input.innerHTML = "";
   }
+
+//insertText("copied text",'text');
+//insertText(hmaburger.docx, 'file');
+
   DOMSelect.inputbox.style.display = "none";
   DOMSelect.settings.style.display = "";
 }

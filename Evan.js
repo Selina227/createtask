@@ -32,8 +32,9 @@ function displayToDoList(array) {
       specificCard.querySelector(".to-do-card").textContent;
 
     for (let i = 0; i < ToDoItems.length; i++) {
+      //if there are 7 items it'll run 7 times
       if (ToDoItems[i] === specificCardText) {
-        ToDoItems.splice(i, 1);
+        ToDoItems.splice(i, 1); //splice=cut out of the array
         break;
       }
     }
